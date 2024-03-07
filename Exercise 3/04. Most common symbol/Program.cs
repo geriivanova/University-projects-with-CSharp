@@ -1,4 +1,5 @@
 ﻿/*
+Imput:
 a
 e
 r
@@ -19,6 +20,8 @@ a
 e
 r
 t
+Output: 
+r
  */
 using System.Collections.Immutable;
 
