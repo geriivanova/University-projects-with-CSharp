@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int[] array = new int[10];
+            double average = 0;
+
+            for(int i = 0; i < array.Length; i++)
+            {
+                int.TryParse(Console.ReadLine(), out array[i]);    
+            }
+            average = array.Average();
+            Console.WriteLine(average); 
         }
     }
 }
