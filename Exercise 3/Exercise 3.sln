@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Check for integers", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.  Sum of absolute numbers", "02.  Sum of absolute numbers\02.  Sum of absolute numbers.csproj", "{E11DB93B-85A2-4D6D-9D1D-222CA6E6A00E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Reverse array", "03. Reverse array\03. Reverse array.csproj", "{184329AE-23C7-4B37-82FF-A25708C90E04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E11DB93B-85A2-4D6D-9D1D-222CA6E6A00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E11DB93B-85A2-4D6D-9D1D-222CA6E6A00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E11DB93B-85A2-4D6D-9D1D-222CA6E6A00E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184329AE-23C7-4B37-82FF-A25708C90E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184329AE-23C7-4B37-82FF-A25708C90E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184329AE-23C7-4B37-82FF-A25708C90E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184329AE-23C7-4B37-82FF-A25708C90E04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
