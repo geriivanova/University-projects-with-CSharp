@@ -81,5 +81,4 @@
         public float Grade;
         public int FacultyNumber;
     }
-
 }
