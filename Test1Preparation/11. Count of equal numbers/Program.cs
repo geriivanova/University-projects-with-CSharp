@@ -14,10 +14,6 @@
                 {
                     countNumber++;
                 }
-                else
-                {
-                    break;
-                }
             }
             while (newNumber == number);
 
