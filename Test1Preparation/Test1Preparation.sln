@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Ignore negative numbers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Count of equal numbers", "11. Count of equal numbers\11. Count of equal numbers.csproj", "{8EEBA2BF-0948-4E04-AB13-A0B11B34520E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Is string palindrome", "12. Is string palindrome\12. Is string palindrome.csproj", "{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{8EEBA2BF-0948-4E04-AB13-A0B11B34520E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EEBA2BF-0948-4E04-AB13-A0B11B34520E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EEBA2BF-0948-4E04-AB13-A0B11B34520E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
