@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Ascending and descendin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.  Contains digit", "07.  Contains digit\07.  Contains digit.csproj", "{86B29AC4-7FF9-4DE3-A98E-BAAFEF0FEC54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Ignore same number", "08. Ignore same number\08. Ignore same number.csproj", "{7B992E66-541B-45DA-B54F-AFDF6DD39A47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{86B29AC4-7FF9-4DE3-A98E-BAAFEF0FEC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86B29AC4-7FF9-4DE3-A98E-BAAFEF0FEC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86B29AC4-7FF9-4DE3-A98E-BAAFEF0FEC54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B992E66-541B-45DA-B54F-AFDF6DD39A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B992E66-541B-45DA-B54F-AFDF6DD39A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B992E66-541B-45DA-B54F-AFDF6DD39A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B992E66-541B-45DA-B54F-AFDF6DD39A47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
