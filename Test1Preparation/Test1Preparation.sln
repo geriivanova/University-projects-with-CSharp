@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Count of equal numbers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. Is string palindrome", "12. Is string palindrome\12. Is string palindrome.csproj", "{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.  Guess the random number", "13.  Guess the random number\13.  Guess the random number.csproj", "{60BAAC78-93DB-4D49-AD7E-D002095BE752}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8EA81C-2E88-4ABF-9A7D-A16E5336EB02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60BAAC78-93DB-4D49-AD7E-D002095BE752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BAAC78-93DB-4D49-AD7E-D002095BE752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BAAC78-93DB-4D49-AD7E-D002095BE752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BAAC78-93DB-4D49-AD7E-D002095BE752}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
