@@ -4,7 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int number = int.Parse(Console.ReadLine());
+            int countNumber = 1;
+            int newNumber;
+            do
+            {
+                newNumber = int.Parse(Console.ReadLine());
+                if(newNumber == number)
+                {
+                    countNumber++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            while (newNumber == number);
+
+            Console.WriteLine($"{number} - {countNumber} times.");
         }
     }
 }
