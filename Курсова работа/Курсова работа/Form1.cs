@@ -65,7 +65,6 @@ namespace Курсова_работа
                 bw.Write(sales[i].stock);
                 bw.Write(sales[i].quantity);
                 bw.Write(sales[i].price);
-                bw.Write(sales[i].quantity * sales[i].price);
             }
             fs.Close();
         }
@@ -74,9 +73,9 @@ namespace Курсова_работа
             new Form4(this).Show();
         }
 
-        public void AddToDataGridView(string bonNumber, string stock, int quantity, double price)
+        public void AddToDataGridView(string bonNumber, string stock, int quantity, double price, double value)
         {
-            dataGridView1.Rows.Add(bonNumber, stock, quantity, price);
+            dataGridView1.Rows.Add(bonNumber, stock, quantity, price, value);
         }
 
         private void button4_Click(object sender, EventArgs e)
