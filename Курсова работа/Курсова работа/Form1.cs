@@ -65,6 +65,7 @@ namespace Курсова_работа
                 bw.Write(sales[i].stock);
                 bw.Write(sales[i].quantity);
                 bw.Write(sales[i].price);
+                bw.Write(sales[i].quantity * sales[i].price);
             }
             fs.Close();
         }
