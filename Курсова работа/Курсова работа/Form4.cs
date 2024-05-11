@@ -23,12 +23,6 @@ namespace Курсова_работа
         private void button1_Click(object sender, EventArgs e)
         {
             gl.AddToDataGridView(TB1.Text, TB2.Text, Convert.ToInt32(TB3.Text), Convert.ToDouble(TB4.Text), Convert.ToInt32(TB3.Text) * Convert.ToDouble(TB4.Text));
-            //Sale st = new Sale();
-            //st.bonNumber = TB1.Text;
-            //st.stock = TB2.Text;
-            //st.quantity = Convert.ToInt32(TB3.Text);
-            //st.price= Convert.ToDouble(TB4.Text);
-            //gl.sales.Add(st);
             Close();
         }
     }
