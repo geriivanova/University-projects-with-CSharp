@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(488, 78);
             this.button1.Name = "button1";
@@ -81,12 +83,12 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(104, 185);
+            this.dataGridView1.Location = new System.Drawing.Point(71, 185);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(518, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(583, 152);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.Visible = false;
             // 
@@ -125,10 +127,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(634, 375);
+            this.button2.Location = new System.Drawing.Point(610, 369);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 49);
+            this.button2.Size = new System.Drawing.Size(152, 54);
             this.button2.TabIndex = 4;
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = false;
@@ -145,6 +148,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Стоки с цена по-ниска от въведената от потребителя";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
