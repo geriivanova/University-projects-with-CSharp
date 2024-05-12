@@ -22,6 +22,7 @@ namespace Курсова_работа
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             double.TryParse(textBox1.Text, out double price);
 
             for (int i = 0; i < gl.sales.Count; i++)
@@ -32,6 +33,8 @@ namespace Курсова_работа
                     dataGridView1.Show();
                 }
             }
+
+            textBox1.Clear();
         }
     }
 }
