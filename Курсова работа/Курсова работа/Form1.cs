@@ -29,8 +29,9 @@ namespace Курсова_работа
                 st.stock = br.ReadString();
                 st.quantity = br.ReadInt32();
                 st.price = br.ReadDouble();
+                st.Value = st.quantity * st.price;
                 sales.Add(st);
-                dataGridView1.Rows.Add(st.bonNumber, st.stock, st.quantity, st.price, st.quantity * st.price);
+                dataGridView1.Rows.Add(st.bonNumber, st.stock, st.quantity, st.price, st.Value);
             }
             fs.Close();
         }
@@ -55,6 +56,7 @@ namespace Курсова_работа
                 st.stock = dataGridView1[1, i].Value.ToString();
                 st.quantity = Convert.ToInt32(dataGridView1[2, i].Value.ToString());
                 st.price = Convert.ToDouble(dataGridView1[3, i].Value.ToString());
+                st.Value = Convert.ToDouble(dataGridView1[4, i].Value.ToString());
                 sales.Add(st);
             }
             fs = new FileStream(fileName, FileMode.Create);
@@ -65,6 +67,8 @@ namespace Курсова_работа
                 bw.Write(sales[i].stock);
                 bw.Write(sales[i].quantity);
                 bw.Write(sales[i].price);
+                bw.Write(sales[i].Value);
+
             }
             fs.Close();
         }
