@@ -57,6 +57,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.MistyRose;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(107, 216);

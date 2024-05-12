@@ -42,27 +42,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 61);
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(51, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 16);
+            this.label1.Size = new System.Drawing.Size(216, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Въведете стойност";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 58);
+            this.textBox1.Location = new System.Drawing.Point(286, 93);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 22);
+            this.textBox1.Size = new System.Drawing.Size(120, 22);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(403, 51);
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(488, 78);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 29);
+            this.button1.Size = new System.Drawing.Size(166, 52);
             this.button1.TabIndex = 2;
             this.button1.Text = "Намери";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
@@ -75,7 +78,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(52, 213);
+            this.dataGridView1.Location = new System.Drawing.Point(122, 199);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -89,6 +92,7 @@
             this.Column1.HeaderText = "Номер на бон";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 125;
             // 
             // Column2
@@ -96,6 +100,7 @@
             this.Column2.HeaderText = "Стока";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 125;
             // 
             // Column3
@@ -118,6 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
