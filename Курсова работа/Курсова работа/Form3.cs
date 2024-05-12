@@ -22,11 +22,11 @@ namespace Курсова_работа
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //double.TryParse(textBox1.Text, out double price);
+            double.TryParse(textBox1.Text, out double price);
 
             for (int i = 0; i < gl.sales.Count; i++)
             {
-                if (Convert.ToDouble(textBox1.Text) > gl.sales[i].price)
+                if (Convert.ToDouble(price) > gl.sales[i].price)
                 {
                     dataGridView1.Rows.Add(gl.sales[i].bonNumber, gl.sales[i].stock, gl.sales[i].quantity, gl.sales[i].price);
                     dataGridView1.Show();
