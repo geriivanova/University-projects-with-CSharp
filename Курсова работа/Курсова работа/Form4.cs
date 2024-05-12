@@ -28,11 +28,12 @@ namespace Курсова_работа
             int.TryParse(TB3.Text, out int quantity);
             double.TryParse(TB4.Text, out double price);
             gl.AddToDataGridView(bonNumber, stock, quantity,price, quantity * price);
-
-            //gl.AddToDataGridView(TB1.Text, TB2.Text, Convert.ToInt32(TB3.Text), 
-            //    Convert.ToDouble(TB4.Text), Convert.ToInt32(TB3.Text) * Convert.ToDouble(TB4.Text));
-
             Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

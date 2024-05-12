@@ -37,6 +37,7 @@
             this.TB3 = new System.Windows.Forms.TextBox();
             this.TB4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -115,7 +116,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.IndianRed;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(313, 263);
+            this.button1.Location = new System.Drawing.Point(439, 121);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 58);
             this.button1.TabIndex = 8;
@@ -123,12 +124,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(490, 272);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 52);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
-            this.ClientSize = new System.Drawing.Size(490, 351);
+            this.ClientSize = new System.Drawing.Size(673, 350);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TB4);
             this.Controls.Add(this.TB3);
@@ -156,5 +170,6 @@
         private System.Windows.Forms.TextBox TB3;
         private System.Windows.Forms.TextBox TB4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
