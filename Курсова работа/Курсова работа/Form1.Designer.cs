@@ -49,43 +49,50 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 294);
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(17, 294);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 16);
+            this.label1.Size = new System.Drawing.Size(612, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Намери най-малко и най-голямо количество продажби ";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(414, 287);
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(625, 286);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 31);
+            this.button1.Size = new System.Drawing.Size(148, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "Намери";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 373);
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(17, 365);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 16);
+            this.label2.Size = new System.Drawing.Size(444, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Стоки с цена по-ниска от въведената ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(318, 366);
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(481, 357);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 31);
+            this.button2.Size = new System.Drawing.Size(148, 50);
             this.button2.TabIndex = 3;
             this.button2.Text = "Намери";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCoral;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -93,12 +100,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(31, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 101);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(559, 145);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(686, 145);
+            this.dataGridView1.Size = new System.Drawing.Size(682, 145);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -139,57 +146,65 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 51);
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(26, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 16);
+            this.label3.Size = new System.Drawing.Size(300, 27);
             this.label3.TabIndex = 5;
             this.label3.Text = "Добави данни за продажби";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(744, 133);
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(736, 101);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 16);
+            this.label4.Size = new System.Drawing.Size(204, 27);
             this.label4.TabIndex = 6;
             this.label4.Text = "Запиши промените";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(728, 373);
+            this.button4.BackColor = System.Drawing.Color.IndianRed;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(814, 388);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 42);
+            this.button4.Size = new System.Drawing.Size(148, 50);
             this.button4.TabIndex = 9;
             this.button4.Text = "Изход";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(255, 43);
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(346, 27);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 33);
+            this.button5.Size = new System.Drawing.Size(148, 50);
             this.button5.TabIndex = 10;
             this.button5.Text = "Добави ";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(747, 186);
+            this.button3.BackColor = System.Drawing.Color.IndianRed;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(765, 149);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 40);
+            this.button3.Size = new System.Drawing.Size(148, 50);
             this.button3.TabIndex = 11;
             this.button3.Text = "Запиши";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(903, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(985, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
