@@ -12,7 +12,6 @@ namespace Курсова_работа
         public string stock;
         public int quantity;
         public double price;
-        public double Value;
     }
     
 }

@@ -29,9 +29,8 @@ namespace Курсова_работа
                 st.stock = br.ReadString();
                 st.quantity = br.ReadInt32();
                 st.price = br.ReadDouble();
-                st.Value = st.quantity * st.price;
                 sales.Add(st);
-                dataGridView1.Rows.Add(st.bonNumber, st.stock, st.quantity, st.price, st.Value);
+                dataGridView1.Rows.Add(st.bonNumber, st.stock, st.quantity, st.price, st.quantity * st.price);
             }
             fs.Close();
         }
@@ -46,34 +45,6 @@ namespace Курсова_работа
             new Form3(this).Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            sales.Clear();
-            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
-            {
-                Sale st = new Sale();
-                st.bonNumber = dataGridView1[0, i].Value.ToString();
-                st.stock = dataGridView1[1, i].Value.ToString();
-                st.quantity = Convert.ToInt32(dataGridView1[2, i].Value.ToString());
-                st.price = Convert.ToDouble(dataGridView1[3, i].Value.ToString());
-                st.Value = Convert.ToDouble(dataGridView1[4, i].Value.ToString());
-                sales.Add(st);
-            }
-            fs = new FileStream(fileName, FileMode.Create);
-            BinaryWriter bw = new BinaryWriter(fs);
-            for (int i = 0; i < sales.Count; i++)
-            {
-                bw.Write(sales[i].bonNumber);
-                bw.Write(sales[i].stock);
-                bw.Write(sales[i].quantity);
-                bw.Write(sales[i].price);
-                bw.Write(sales[i].Value);
-
-            }
-            fs.Close();
-        }
-
-       
         private void button5_Click(object sender, EventArgs e)
         {
             new Form4(this).Show();
@@ -90,5 +61,28 @@ namespace Курсова_работа
             Application.Exit();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sales.Clear();
+            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+            {
+                Sale st = new Sale();
+                st.bonNumber = dataGridView1[0, i].Value.ToString();
+                st.stock = dataGridView1[1, i].Value.ToString();
+                st.quantity = Convert.ToInt32(dataGridView1[2, i].Value.ToString());
+                st.price = Convert.ToDouble(dataGridView1[3, i].Value.ToString());
+                sales.Add(st);
+            }
+            fs = new FileStream(fileName, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            for (int i = 0; i < sales.Count; i++)
+            {
+                bw.Write(sales[i].bonNumber);
+                bw.Write(sales[i].stock);
+                bw.Write(sales[i].quantity);
+                bw.Write(sales[i].price);
+            }
+            fs.Close();
+        }
     }
 }
