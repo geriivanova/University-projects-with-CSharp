@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,9 +23,15 @@ namespace Курсова_работа
 
         private void button1_Click(object sender, EventArgs e)
         {
-            gl.AddToDataGridView(TB1.Text, TB2.Text, Convert.ToInt32(TB3.Text), 
-                Convert.ToDouble(TB4.Text), Convert.ToInt32(TB3.Text) * Convert.ToDouble(TB4.Text));
-            
+            string bonNumber = TB1.Text;
+            string stock = TB2.Text;
+            int.TryParse(TB3.Text, out int quantity);
+            double.TryParse(TB4.Text, out double price);
+            gl.AddToDataGridView(bonNumber, stock, quantity,price, quantity * price);
+
+            //gl.AddToDataGridView(TB1.Text, TB2.Text, Convert.ToInt32(TB3.Text), 
+            //    Convert.ToDouble(TB4.Text), Convert.ToInt32(TB3.Text) * Convert.ToDouble(TB4.Text));
+
             Close();
         }
     }
