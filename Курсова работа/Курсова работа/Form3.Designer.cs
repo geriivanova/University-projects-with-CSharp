@@ -51,6 +51,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.MistyRose;
             this.textBox1.Location = new System.Drawing.Point(286, 93);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(120, 22);
@@ -72,6 +73,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
