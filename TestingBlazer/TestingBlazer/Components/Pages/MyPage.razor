@@ -1,0 +1,59 @@
+﻿@page "/mypage"
+
+<PageTitle>MyPage</PageTitle>
+
+<h1>MyPage</h1>
+
+@rendermode InteractiveServer
+
+@*<input type="text" @bind="text1" />*@
+
+<input type="text" @bind="text1" @bind:event="oninput" />
+
+<p>Това е текстът, който написахте: @text1</p>
+
+<br />
+<input type="password" @bind="text2" />
+<input type="password" @bind="text3" />
+<br />
+<br />
+<button class="btn btn-primary" @onclick="PasswordCheck">Check password</button>
+<span>@message</span>
+
+
+<br />
+<br />
+<span>Въведете стъпка на брояча:</span>
+<input type="text" @bind="text4" />
+<Counter IncrementValue=@text4 />
+
+<br />
+<br />
+@*<input type="checkbox" @bind="isChecked" @bind:after="changeCheck" />*@
+<input type="checkbox" @bind="isChecked" @oninput="changeCheck" />
+<input type="text" @bind="text5" />
+
+
+@code {
+	private string? text1;
+	private string? text2;
+	private string? text3;
+	private string? message;
+	private string? text4;
+	private string? text5;
+	private bool isChecked;
+
+	private void PasswordCheck()
+	{
+		if (text2 == text3) message = "Паролите съвпадат";
+		else message = "Паролите не съвпадат";
+	}
+
+
+	public void changeCheck()
+	{
+		if (isChecked) text5 = "Да";
+		else text5 = "Не";
+	}
+
+}
