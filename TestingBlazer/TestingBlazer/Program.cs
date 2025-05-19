@@ -30,6 +30,11 @@ public class Program
         app.MapRazorComponents<App>()
             .AddInteractiveServerRenderMode();
 
+        using (var context = new ProductContext())
+        {
+            context.Database.EnsureCreated();
+        }
+
         app.Run();
     }
 }

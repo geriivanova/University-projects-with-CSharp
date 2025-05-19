@@ -1,0 +1,94 @@
+﻿@page "/page2"
+@rendermode InteractiveServer
+<PageTitle>Page2</PageTitle>
+
+<h1>Page2</h1>
+
+<input type="text" @bind="textbox" />
+
+<button class="btn btn-primary" @onclick="SetHyperlink">Set hyperlink</button>
+
+<a href="@linkURL" target="_blank">@linkName</a>
+
+<input type="text" @bind=newElement />
+<img src="dog.png" @onclick="ImageClick" />
+@* <select name="elements" @bind="SelectedItem" @bind:after="SelectItem"> *@
+<select name="elements" @bind="SelectedItem" @onclick="SelectItem">
+    @foreach (string item in elements)
+    {
+        <option value="@item">@item</option>
+    }
+</select>
+
+<input type="text" @bind=Result />
+
+<select name="listbox1" @bind="SelectedLb1" size="4">
+    @foreach (string item in listbox1)
+    {
+        <option value="@item">@item</option>
+    }
+</select>
+
+<button class="btn btn-primary" @onclick="MoveToRight">Move to right</button>
+
+<button class="btn btn-primary" @onclick="MoveToLeft">Move to left</button>
+
+<select name="listbox2" @bind="SelectedLb2" size="4">
+    @foreach (string item in listbox2)
+    {
+        <option value="@item">@item</option>
+    }
+</select>
+
+@code {
+
+    private string? linkName, linkURL, textbox;
+
+    private string? newElement;
+    private List<string> elements = new List<string>();
+    private string? SelectedItem, Result;
+
+    private string? SelectedLb1, SelectedLb2;
+    private List<string> listbox1 = new List<string>() { "1", "2", "3", "4" };
+    private List<string> listbox2 = new List<string>();
+
+
+    protected void MoveToRight()
+    {
+        if (SelectedLb1 != null)
+        {
+            listbox2.Add(SelectedLb1);
+            listbox1.Remove(SelectedLb1);
+            SelectedLb1 = null;
+        }
+    }
+    protected void MoveToLeft()
+    {
+        if (SelectedLb2 != null)
+        {
+            listbox1.Add(SelectedLb2);
+            listbox2.Remove(SelectedLb2);
+            SelectedLb2 = null;
+        }
+
+    }
+
+    protected void SelectItem()
+    {
+        Result = SelectedItem;
+    }
+
+    protected void ImageClick()
+    {
+        if (!String.IsNullOrWhiteSpace(newElement) && !elements.Contains(newElement))
+
+            elements.Add(newElement);
+    }
+
+    protected void SetHyperlink()
+    {
+        linkName = textbox;
+        linkURL = textbox;
+    }
+
+}

@@ -1,0 +1,117 @@
+﻿@page "/page4"
+@rendermode InteractiveServer
+<PageTitle>Page4</PageTitle>
+
+<h1>Page4</h1>
+
+<p>Добавяне на нов продукт:</p>
+<input placeholder="Име:" @bind="newProductName" />
+<input placeholder="Цена:" @bind="newProductPrice" />
+<button class="btn btn-primary" @onclick="AddProduct">Добави</button>
+
+<br />
+<br />
+<label>Налични продукти:</label>
+
+<select name="products" @bind="ProductValue" @bind:after="ShowProductInfo">
+    @foreach (Product item in context.products)
+    {
+        <option value="@item.productid">@item.productname</option>
+    }
+</select>
+<br />
+<br />
+
+<p>Информация за избрания продукт:</p>
+<label>ID:</label>
+<input type="text" @bind="ProductID" />
+
+<label>Цена:</label>
+<input type="text" @bind="ProductPrice" />
+
+<button class="btn btn-primary" @onclick="DeleteProduct">Изтрий избрания продукт</button>
+<br />
+<br />
+<button class="btn btn-primary" @onclick="ShowHideTable">Покажи/скрий таблица с всички продукти</button>
+<br />
+<br />
+
+<table class="table table-striped" style="visibility: @(showTable ? "visible" :"hidden")">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Име</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in context.products)
+        {
+            <tr>
+                <td>@product.productid</td>
+                <td>@product.productname</td>
+                <td>@product.price.ToString("C2")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    private string? ProductID, ProductValue, ProductPrice;
+
+    private bool showTable = false;
+
+    private void ShowHideTable()
+    {
+        showTable = !showTable;
+    }
+
+    private void ShowProductInfo()
+    {
+        ProductID = ProductValue;
+        foreach (Product item in context.products)
+        {
+            if (ProductID != null && item.productid == int.Parse(ProductID))
+            {
+                ProductPrice = item.price.ToString();
+                break;
+            }
+
+        }
+
+    }
+    private void DeleteProduct()
+    {
+        foreach (Product item in context.products)
+        {
+            if (ProductID != null && item.productid == int.Parse(ProductID))
+            {
+                context.products.Remove(item);
+                context.SaveChanges();
+                ProductID = string.Empty;
+                ProductPrice = string.Empty;
+                break;
+            }
+
+        }
+    }
+
+
+    private string? newProductName, newProductPrice;
+
+    ProductContext context = new ProductContext();
+
+    private void AddProduct()
+    {
+        if (!string.IsNullOrWhiteSpace(newProductName) && !string.IsNullOrWhiteSpace(newProductPrice))
+        {
+            context.products.Add(new Product { productname = newProductName, price = float.Parse(newProductPrice) });
+            context.SaveChanges();
+            newProductName = string.Empty;
+            newProductPrice = string.Empty;
+        }
+
+    }
+
+}

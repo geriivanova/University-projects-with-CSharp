@@ -1,0 +1,124 @@
+﻿@page "/page3"
+@rendermode InteractiveServer
+<PageTitle>Page3</PageTitle>
+
+<h1>Page3</h1>
+
+<button class="btn btn-primary" @onclick="GenCheckBoxes"> Generate CheckBoxes</button>
+<br />
+<br />
+@for (int i = 0; i < chbs.Count; i++)
+{
+	int j = i;
+	<input type="checkbox" id="chb@(i)" @bind="chbs[j]" />
+	<label for="chb@(i)">chb@(i + 1)</label>
+	<br />
+}
+
+<br />
+<br />
+<input type="text" @bind="text1" />
+<input type="text" @bind="text2" />
+<input type="checkbox" @bind="VAT" />
+<button class="btn btn-primary" @onclick="Calculate">Calculate</button>
+<span>@result</span>
+
+<br />
+<br />
+<input type="radio" id="rbred" name="color" @onchange="@(e => RadioChanged(0))" />
+<label for="rbred">red</label>
+<input type="radio" id="rbgreen" name="color" @onchange="@(e => RadioChanged(1))" />
+<label for="rbgreen">green</label>
+<input type="radio" id="rbblue" name="color" @onchange="@(e => RadioChanged(2))" />
+<label for="rbblue">blue</label>
+
+<button class="btn btn-primary" @onclick="ChangeColor">Change Color</button>
+
+<input type="text" style="background-color : @color" />
+
+<br />
+<br />
+<button class="btn btn-primary" @onclick="GenRadios">Generate Radio Buttons</button>
+<br />
+<br />
+
+<input type="radio" id="rbspring" name="season" @onchange="@(e => SeasonChanged(0))" />
+<label for="rbspring">Spring</label>
+<input type="radio" id="rbsummer" name="season" @onchange="@(e => SeasonChanged(1))" />
+<label for="rbsummer">Summer</label>
+<input type="radio" id="rbautumn" name="season" @onchange="@(e => SeasonChanged(2))" />
+<label for="rbautumn">Autumn</label>
+<input type="radio" id="rbwinter" name="season" @onchange="@(e => SeasonChanged(3))" />
+<label for="rbwinter">Winter</label>
+
+<br />
+
+<img src="@seasonImage" />
+
+@for (int i = 0; i < rb_number; i++)
+{
+	<input type="radio" id="rb@(i)" name="radiogrp" />
+	<label for="rb@(i)">rb@(i + 1)</label>
+	<br />
+}
+
+@code {
+	private List<bool> chbs = new List<bool>();
+	private string? text1, text2, result;
+	private bool VAT;
+
+	int rb_number = 0;
+
+	private string? seasonImage;
+
+	int seasonSelected = -1;
+
+	protected void SeasonChanged(int i)
+	{
+		seasonSelected = i;
+		seasonImage = "image" + seasonSelected + ".png";
+	}
+
+	private void GenRadios()
+	{
+		rb_number++;
+	}
+
+	int radioSelected = -1;
+
+	private void RadioChanged(int i)
+	{
+		radioSelected = i;
+	}
+
+	private string? color;
+
+	private void ChangeColor()
+	{
+		if (radioSelected == 0) color = "red";
+		else if (radioSelected == 1) color = "green";
+		else if (radioSelected == 2) color = "blue";
+	}
+
+	private void Calculate()
+	{
+		try
+		{
+			int quantity = Convert.ToInt32(text1);
+			double price = Convert.ToDouble(text2);
+			double amount = quantity * price;
+			if (VAT) amount = amount * 1.2;
+			result = amount.ToString("f2");
+		}
+		catch (Exception ex)
+		{
+			result = ex.Message;
+		}
+	}
+
+	private void GenCheckBoxes()
+	{
+		chbs.Add(false);
+	}
+
+}
